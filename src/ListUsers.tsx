@@ -56,7 +56,8 @@ class listUsers extends Component<ListUserProps>{
             this.props.initialState.map((is, i) => 
                     items.push(
                         <>
-                            nome: {is.id} <br/>
+                            id: {is.id} <br/>
+                            nome: {is.name} <br/>
                             email: {is.email} <br/>
                             Data de Nascimento: {is.birthday} <br/>
                             Tipo de usuario: {is.userType} <br/>
