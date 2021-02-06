@@ -20,7 +20,7 @@ const mapStateToProps = ({data: {initialState,forms},dispatch}) => {
 export interface AppProps{
   dispatch : (Object) => void
   initialState : string[]
-  nome : string
+  name : string
   email : string
   password : string
   passwordConfirmation : string
@@ -33,7 +33,7 @@ export interface AppProps{
 
 class app extends Component<AppProps>{
   public state = {
-    nome : undefined,
+    name : undefined,
     email : undefined,
     password : undefined,
     passwordConfirmation: undefined,
@@ -91,7 +91,7 @@ class app extends Component<AppProps>{
     return(
       <>
         <Button onClick={() => console.log(this.props)}>Log redux</Button>
-        <TextField onChange={v => this.handleChange('nome',v)} value={this.state.nome} ph={'Nome'} type={'text'} />
+        <TextField onChange={v => this.handleChange('name',v)} value={this.state.name} ph={'Nome'} type={'text'} />
         <TextField onChange={v => this.handleChange('email',v)} value={this.state.email} ph={'Email'} type={'text'}/>
         <TextField onChange={v => this.handleChange('password',v)} value={this.state.password} ph={'Senha'} type={'password'} />
         <TextField onChange={v => this.handleChange('passwordConfirmation',v)} value={this.state.passwordConfirmation} ph={'Confirme sua senha'} type={'password'} />
